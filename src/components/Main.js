@@ -10,15 +10,8 @@ class Main extends Component{
         }
         
     }
-    componentDidMount(){
-        fetch('http://localhost:4000/api/user/getAllUser')
-            .then(response => response.json())
-            .then(data => this.setState({
-                data:data,
-                dataLoaded:true
-            }));
-           
-    }
+    
+
     render(){
         if(this.state.dataLoaded){
             return(
