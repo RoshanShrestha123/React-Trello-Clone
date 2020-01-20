@@ -1,13 +1,15 @@
 import React, {Component } from 'react';
 import Input from './Input';
 import Button from './Button';
-import {Link,useHistory} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 
 
 class Form extends Component{
     constructor(){
         super();
         this.state = {
+            email:'',
+            password:'',
             token:'',
             isTokenLoaded: false
         }
@@ -20,8 +22,17 @@ class Form extends Component{
         console.log(this.state);
     }
     handleSubmit = () =>{
+        const data = {email: this.state.email, password: this.state.password};
         console.log("button is working..");
-        fetch('http://localhost:4000/api/auth/login')
+        fetch('http://localhost:4000/api/auth/login',{
+            method:'POST',
+            headers:{
+                'Context-Type':'application/json'
+            },
+            body:JSON.stringify({
+                mesg: " this is the raw data"
+            })
+        })
             .then(response => response.json())
             .then(data => this.setState({
                 token:data,
