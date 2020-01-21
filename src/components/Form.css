@@ -1,0 +1,24 @@
+.form{
+    background-color: white;
+    width: calc(50% - 40px);
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+    position: absolute;
+    transform: translate(50%,50%);
+
+  
+}
+
+/* for mobile view */
+@media only screen and (max-width: 480px) { 
+    .form {
+      background-color: white;
+      width: calc(100% - 40px); 
+      transform: translate(0,50%);
+ 
+    }
+  }

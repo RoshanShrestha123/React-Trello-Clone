@@ -2,6 +2,7 @@ import React, {Component } from 'react';
 import Input from './Input';
 import Button from './Button';
 import {Link} from 'react-router-dom';
+import './Form.css';
 
 
 class Form extends Component{
@@ -21,17 +22,14 @@ class Form extends Component{
         });
         console.log(this.state);
     }
-    handleSubmit = () =>{
+    handleSubmit = (e) =>{
+        e.preventDefault();
         const data = {email: this.state.email, password: this.state.password};
         console.log("button is working..");
         fetch('http://localhost:4000/api/auth/login',{
             method:'POST',
-            headers:{
-                'Context-Type':'application/json'
-            },
-            body:JSON.stringify({
-                mesg: " this is the raw data"
-            })
+            headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+            body:JSON.stringify({ data: data })
         })
             .then(response => response.json())
             .then(data => this.setState({
@@ -52,16 +50,13 @@ class Form extends Component{
             // now load the dashboard
         }
         return(
-            <div className="form">
-                <h1>Form</h1>
+            <form onSubmit={this.handleSubmit} className="form">
+                <h1>Login</h1>
                 <Input name="email" change={this.handleChange} /> <br/>
                 <Input name="password"change={this.handleChange} /><br/>
-                <Link to="/dashboard">
-                    <Button name="go to dashboard" click={this.handleClick}></Button>
-                </Link>
-                <Button name="Login" click={this.handleSubmit} />
+                <Button name="Login" />
                 
-            </div>
+            </form>
             
         )
     }
