@@ -1,0 +1,16 @@
+.loginPage{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 25px ;
+}
+
+.logoHolder{
+    width: 135px;
+    padding: 8px;
+
+}
+
+.logo{
+    width: 100%;
+}

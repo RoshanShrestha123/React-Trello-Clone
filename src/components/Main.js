@@ -1,6 +1,7 @@
 import React,{Component} from 'react';
 import Form from './Form';
-import './Form.css';
+import './Main.css';
+import LogoImage from '../images/logo.png';
 
 class Main extends Component{
     constructor(){
@@ -8,20 +9,24 @@ class Main extends Component{
         this.state = {
             data: '',
             dataLoaded: false
-        }
-        
+        }   
     }
-    
 
     render(){
         if(this.state.dataLoaded){
             return(
                 <h1> {this.state.data.meg} </h1>
-            )
-            
+            )       
         }
+        
         return(
-           <Form/>
+            <div className="loginPage">
+                <div className="logoHolder">
+                     <img className="logo" src={LogoImage}></img>
+                </div>
+                <Form {...this.props}/>
+            </div>
+            
         )
     }
 }

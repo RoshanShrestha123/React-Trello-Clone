@@ -1,24 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 .form{
     background-color: white;
     width: calc(50% - 40px);
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    align-content: center;
-    position: absolute;
-    transform: translate(50%,50%);
-
-  
+    flex-direction: column ;
 }
+
+.title{
+    color: #5E6C84;
+    
+    font-weight: 900;
+    padding: 20px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 10px;
+    
+
+}
+
 
 /* for mobile view */
 @media only screen and (max-width: 480px) { 
     .form {
       background-color: white;
       width: calc(100% - 40px); 
-      transform: translate(0,50%);
- 
     }
+  
+    .title{
+      color: #5E6C84;
+     
+      font-stretch: condensed;
+      font-size: 18px;
+    
+    }
+    
   }

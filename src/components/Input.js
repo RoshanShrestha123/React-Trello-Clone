@@ -4,7 +4,7 @@ import './Input.css';
 function Input(props){
     return(
       
-        <input className="input"  type="text" name={props.name} placeholder={props.name} onChange={(e)=>props.change(e)} ></input>
+        <input className="input"  type="text" name={props.name} placeholder={props.placeHolder} onChange={(e)=>props.change(e)} ></input>
     )
 }
 

@@ -1,17 +1,17 @@
 .button{
-   background-color: blue;
-   width: 40%;
-   padding: 15px;
-   color: white;
-   margin-top: 20px;
-   border: 1px solid white;
-   border-radius: 25px;
+   background-color: #5AAC44;
 
+   padding: 5px;
+   color: white;
+   border: 1px solid white;
+   font-size: 18px;
+   border-radius: 5px;
 }
+
 @media only screen  and (max-width:480px){
     .button{
-        width: calc(100% - 20px);
-        font-size: 20px;
+     
+        
 
     }
 }
