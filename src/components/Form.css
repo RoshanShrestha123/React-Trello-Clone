@@ -20,6 +20,10 @@
     
 
 }
+.border{
+  border-bottom: 1px solid #DFE1E6;
+  margin-top: 20px;
+}
 
 
 /* for mobile view */

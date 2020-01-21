@@ -61,6 +61,7 @@ class Form extends Component{
                 <Input placeHolder="Enter email" name="email" change={this.handleChange} /> <br/>
                 <Input placeHolder="Enter password" name="password"change={this.handleChange} /><br/>
                 <Button name="Log In" click={this.handleClick} />
+                <div className="border"></div>
                 
             </form>
             
