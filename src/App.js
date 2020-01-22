@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import Main from './components/Main';
+import Main from './components/Login_page/Main';
 import './App.css';
 import {BrowserRouter as Router ,Switch, Route} from 'react-router-dom';
-import Dashboard from './components/Dashboard';
+import Dashboard from './components/Dashboard/Dashboard';
+import Register from './components/Register_page/Register';
 
 class App extends Component {
  
@@ -11,9 +12,9 @@ class App extends Component {
       <Router>
         <div className="App">
           <Switch>
-            <Route path="/" exact component={Main} />
-            {/* <Route path="/" exact component={Main} /> */}
+            <Route path="/login" component={Main} />
             <Route path="/dashboard" component={Dashboard} />
+            <Route path="/register" component={Register}/>
           </Switch>
         </div>
       </Router> 

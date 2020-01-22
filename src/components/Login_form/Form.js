@@ -1,7 +1,7 @@
 import React, {Component } from 'react';
-import Input from './Input';
-import Button from './Button';
-import {Link} from 'react-router-dom';
+import Input from '../Input/Input';
+import Button from '../Button/Button';
+
 import './Form.css';
 
 class Form extends Component{
@@ -51,6 +51,7 @@ class Form extends Component{
     render(){
         if(this.state.isTokenLoaded){
             localStorage.setItem('token',this.state.token.token);
+
             this.props.history.push('/dashboard');
         }  
         return(
@@ -58,8 +59,8 @@ class Form extends Component{
                  {this.state.error? <div>Error</div> : ''}
                 <div className="title">Log In to Trello</div>
 
-                <Input placeHolder="Enter email" name="email" change={this.handleChange} /> <br/>
-                <Input placeHolder="Enter password" name="password"change={this.handleChange} /><br/>
+                <Input placeHolder="Enter email" name="email" change={this.handleChange}  type="text" /> <br/>
+                <Input placeHolder="Enter password" name="password"change={this.handleChange}  type="password"/><br/>
                 <Button name="Log In" click={this.handleClick} />
                 <div className="border"></div>
                 
