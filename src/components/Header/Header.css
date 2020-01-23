@@ -9,3 +9,8 @@
 .logo{
     width: 100%;
 }
+.header-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

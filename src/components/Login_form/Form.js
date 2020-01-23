@@ -1,7 +1,6 @@
 import React, {Component } from 'react';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
-
 import './Form.css';
 
 class Form extends Component{
@@ -63,6 +62,7 @@ class Form extends Component{
                 <Input placeHolder="Enter password" name="password"change={this.handleChange}  type="password"/><br/>
                 <Button name="Log In" click={this.handleClick} />
                 <div className="border"></div>
+                
                 
             </form>
             

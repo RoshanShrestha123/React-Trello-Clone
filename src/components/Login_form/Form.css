@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
 .form{
     background-color: white;
-    width: calc(50% - 40px);
+    width: 30%;
     margin: 0 auto;
     padding: 10px;
     display: flex;
@@ -24,6 +24,17 @@
   border-bottom: 1px solid #DFE1E6;
   margin-top: 20px;
 }
+
+.terms{
+  font-size: 12px;
+  text-align: left;
+  color: #A2A2A2;
+  margin: 10px 0 20px 0 ;
+}
+.link{
+  color: #1D65D1;
+}
+
 
 
 /* for mobile view */

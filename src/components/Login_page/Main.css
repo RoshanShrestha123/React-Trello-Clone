@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
+    flex-direction: column;
     padding: 0 25px ;
     text-align: center;
 

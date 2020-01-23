@@ -4,9 +4,12 @@ import './Header.css';
 
 function Header(){
     return(
-        <div className="logoHolder">
+        <div className="header-wrapper">
+            <div className="logoHolder">
              <img className="logo" src={LogoImage} alt="Logo"></img>
         </div>
+        </div>
+        
     )
 }
 

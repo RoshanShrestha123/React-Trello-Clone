@@ -2,7 +2,7 @@ import React, {Component } from 'react';
 import Input from '../Input/Input';
 import Button from '../Button/Button';
 
-import './Register_Form.css';
+import '../Login_form/Form.css';
 
 class Register_Form extends Component{
     constructor(){
@@ -21,13 +21,33 @@ class Register_Form extends Component{
         });
     }
     handleSubmit = (e) =>{
-       
+       e.preventDefault();
+       const userData = {email:this.state.email, name:this.state.name , password:this.state.password};
+       fetch('http://localhost:4000/api/auth/register',{
+           method:'POST',
+           headers:{'Content-Type':'application/json','Accept':'application/json'},
+           body:JSON.stringify({data:userData})
+       })
+       .then(response => {
+           if(!response.ok) throw response;
+           return response.json()
+       })
+       .then(data =>{
+           this.setState({
+               dataRegistered:true
+           })
+       }).catch((error)=>{
+           console.log(error)
+       })
     }
     handleClick = () => {
         console.log("handle click");
     }
     render(){
        
+       if(this.state.dataRegistered){
+        this.props.history.push('/login');    
+       }
         return(
             <form onSubmit={this.handleSubmit} className="form">
                 <div className="title">Sign up to Trello</div>

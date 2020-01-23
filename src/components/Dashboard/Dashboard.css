@@ -1,0 +1,21 @@
+.dashboard-container{
+  
+    overflow: auto;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.dashboard-right{
+    float: right;
+    width: 75%;
+    margin: 30px 10px;
+    background-color: #E1E1E1;
+    
+}
+.dashboard-left{
+    float: left;
+    width: 20%;
+    margin: 30px 10px;
+    background-color: #E1E1E1;
+}
+

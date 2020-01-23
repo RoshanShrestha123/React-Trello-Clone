@@ -5,11 +5,11 @@ import Register_Form from '../Register_form/Register_Form';
 import {Link} from 'react-router-dom';
  
 
-function Register(){
+function Register(props){
     return(
        <div className="register-page">
            <Header/>
-           <Register_Form/>
+           <Register_Form {...props}/>
            <Link to="/login" className="signUp" >Already have an account? Log In</Link>
        </div>
     )
