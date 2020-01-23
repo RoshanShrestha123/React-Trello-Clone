@@ -1,5 +1,5 @@
 import React from 'react';
-import List from '../List/List';
+import List from '../Menu_List/Menu_List';
 import './Menu_List_Holder.css';
 
 class Menu_List_Holder extends React.Component{
