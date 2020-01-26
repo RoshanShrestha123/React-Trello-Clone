@@ -4,8 +4,8 @@ import './Card.css';
 
 function Card(props){
     return(
-        <div className="card" >
-        <span className="card-title">{props.title} </span>
+        <div className="card" onClick={(e)=>{props.click(e)}} >
+        <span className="card-title"> {props.title}</span>
         </div>
     )
 }

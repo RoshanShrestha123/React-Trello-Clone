@@ -1,0 +1,13 @@
+.todo-wrapper{
+    background-color: #EBECF0;
+    width: calc(300px - 40px);
+    max-height: 300px;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 3px;
+    display: inline-block;
+}
+
+.list-title{
+    padding: 0 10px;
+}

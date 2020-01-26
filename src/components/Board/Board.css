@@ -1,8 +1,7 @@
 .card-holder{
     display: flex;
     flex-wrap: wrap;
-    width: calc(100% - 20px);
-
+    width: 100%;
     margin: 10px;
 }
 .board-title{

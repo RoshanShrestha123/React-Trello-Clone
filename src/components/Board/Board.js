@@ -2,19 +2,21 @@ import React from 'react';
 import Card from '../Card/Card';
 import './Board.css';
 
-class Board extends React.Component{
-    render(){
+//props.data-> array
+function Board(props){
+    
+    const arr = props.data;
+    let boardsData =arr.map((board)=>{
         return(
-            <div className="card-holder">
-                <h3 className="board-title">Starred Project</h3>
-                <Card title="Dookan Project"/>
-                <Card title="React-TODO-Project"/>
-                <Card title="Unity game development"/>
-                <Card title="Flappy bird"/>
-                
-               
-            </div>
+            <Card key={board.id} title={board.name}/>
         )
-    }
+    })
+    return(
+        <div className="card-holder">
+            <div className="board-title">{props.title} </div>
+            {boardsData}
+        </div>
+    )
 }
+
 export default Board;

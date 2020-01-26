@@ -1,9 +1,10 @@
 .input{
  
-  
+    width: calc(100% - 20px);
     padding: 10px;
     background-color: #FAFBFC;
     border: 1px solid #DFE1E6;
+    
     
 
 }

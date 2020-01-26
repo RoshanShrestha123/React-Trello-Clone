@@ -1,0 +1,6 @@
+.todo-page{
+    white-space: nowrap;
+    background-color: #0079BF;
+    overflow: auto;
+    height: 90vh;
+}
