@@ -16,7 +16,7 @@ class App extends Component {
             <Route path="/login" component={Main} />
             <Route path="/dashboard" component={Dashboard} />
             <Route path="/register" component={Register}/>
-            <Route path="/todo-page" component={Todo_Page}/>
+            <Route path="/todo-page/:id" component={Todo_Page}/>
           </Switch>
         </div>
       </Router> 

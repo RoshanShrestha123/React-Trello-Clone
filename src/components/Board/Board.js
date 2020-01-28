@@ -2,13 +2,16 @@ import React from 'react';
 import Card from '../Card/Card';
 import './Board.css';
 
-//props.data-> array
+function handleClick(id,history){
+
+    //id
+    history.push('/todo-page/'+id);
+}
 function Board(props){
-    
     const arr = props.data;
     let boardsData =arr.map((board)=>{
         return(
-            <Card key={board.id} title={board.name}/>
+            <Card key={board.id} title={board.name} click={handleClick} id={board.id} history={props.history}/>
         )
     })
     return(

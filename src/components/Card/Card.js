@@ -3,9 +3,12 @@ import './Card.css';
 
 
 function Card(props){
+
+    const id = props.id;
+    const history = props.history;
     return(
-        <div className="card" onClick={(e)=>{props.click(e)}} >
-        <span className="card-title"> {props.title}</span>
+        <div className="card" onClick={()=>{props.click(id,history)}} >
+             <span className="card-title"> {props.title} {id} </span>
         </div>
     )
 }

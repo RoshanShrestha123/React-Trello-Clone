@@ -7,6 +7,8 @@ class Menu_List_Holder extends React.Component{
         return(
             <div className="menu-holder">
                 <List name="Boards" />
+                <List name="Home" />
+                <List name="Templates" />
              
               
             </div>
