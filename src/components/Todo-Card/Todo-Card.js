@@ -1,10 +1,10 @@
 import React from 'react';
 import './Todo-Card.css';
 
-function Todo_Card(){
+function Todo_Card(props){
     return(
         <div className='todo-list'>
-            task to do
+          <p>{props.name}</p>  
         </div>
     );
 }
